@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container mt-5 mb-2">
+        <button class="btn btn-secondary" onclick="getPosts()">GET DATA</button>
+    </div>
+    <!----- 
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Open modal
+      </button>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+            <!---modal header->
+            <div class="modal-header">
+                <h4>Modal Heading</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- modal body->
+                <div class="modal-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                                    <div>
+                                        <label>User Id*</label><label class="validation-error hide" id="userIdValidationError">This field is required.</label>
+                                        <input type="text" name="userId" id="userId">
+                                    </div>
+                                    <div>
+                                        <label>Id</label>
+                                        <input type="text" name="id" id="id" readonly disabled>
+                                    </div>
+                                    <div>
+                                        <label>Title</label>
+                                        <input type="text" name="title" id="title">
+                                    </div>
+                                    <div>
+                                        <label>Body</label>
+                                        <input type="text" name="body" id="body">
+                                    </div>
+                                    <div  class="form-action-buttons">
+                                        <input type="submit" value="Submit">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>  
+                </div>
+        
+            </div>
+            </div>
+        </div>
+     -->
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>User Id*</label><label class="validation-error hide" id="userIdValidationError">This field is required.</label>
+                        <input type="text" name="userId" id="userId">
+                    </div>
+                    <div>
+                        <label>Id</label>
+                        <input type="text" name="id" id="id" readonly disabled>
+                    </div>
+                    <div>
+                        <label>Title</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div>
+                        <label>Body</label>
+                        <input type="text" name="body" id="body">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>    
+    <div class="container-fluid">   
+        <table class="table table-striped list" id="myTable">
+            <thead class="bg-dark">
+                <tr class="text-white">
+                    <th>User Id</th>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th> Edit/Delete</th>
+                </tr>                    
+                <tbody class="bg-dark text-white table-striped">    
+                </tbody>    
+            </thead>           
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
